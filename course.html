@@ -3,120 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Eduford University's comprehensive courses in Business, Technology, Sciences, Arts, and more. Find your perfect program.">
-    <meta name="keywords" content="courses, degrees, programs, undergraduate, postgraduate, online learning">
-    <meta name="author" content="Eduford University">
-    <title>Our Courses | Eduford University</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Explore Eduford University's comprehensive courses in Business, Technology, Sciences, Arts, and more. Find your perfect program for undergraduate, graduate, and professional studies.">
+    <meta name="keywords" content="courses, degrees, programs, undergraduate, postgraduate, online learning, computer science, business, engineering">
+    <title>Academic Programs | Eduford University</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <link rel="manifest" href="manifest.json">
+</head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <select aria-label="Select language">
-            <option value="en">🇺🇸 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="fr">🇫🇷 Français</option>
-        </select>
-    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Sub Header -->
     <section class="sub-header">
-        <nav>
-            <a href="index.html"><img src="images/IMG_5922.PNG"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="course.html">COURSE</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
+        <div class="sub-header-bg" style="background-image: url('images/images2.jpg');"></div>
+        <div class="sub-header-bg" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%); z-index: 1;"></div>
+        
+        <nav id="navbar" style="position: relative; z-index: 2;">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/IMG_5922.PNG" alt="Eduford University Logo">
+                    <span class="logo-text">Eduford</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="course.html" class="active">Courses</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-       <h1>Our Courses</h1>
-
-    </section>
-
-    <!------Course---->
-    <section class="course">
-        <h1>Courses We Offer</h1>
-        <p>Discover our comprehensive range of programs designed to prepare you for success in your chosen career path.</p>
-
-        <div class="row">
-            <div class="course-col">
-                <h3>Intermediate Programs</h3>
-                <p>Foundation courses designed to bridge the gap between secondary education and university-level studies. Build essential skills in critical thinking, research, and academic writing.</p>
-            </div>
-            <div class="course-col">
-                <h3>Undergraduate Degrees</h3>
-                <p>Comprehensive bachelor's programs across Arts, Sciences, Business, and Technology. Our curriculum combines theoretical knowledge with practical experience through internships and projects.</p>
-            </div>
-            <div class="course-col">
-                <h3>Post Graduate Studies</h3>
-                <p>Advanced master's and doctoral programs for specialized knowledge. Work alongside leading researchers and industry experts to advance your career and contribute to your field.</p>
-            </div>
-        </div>
-    </section>
-
-    <!---------Facilities------>
-    <section class="facilities">
-        <h1>Our Facilities</h1>
-        <p>State-of-the-art amenities designed to support your academic journey and personal growth.</p>
-
-        <div class="row">
-            <div class="facilities-col">
-                <img src="images/images333.jpg" alt="World Class Library">
-                <h3>World Class Library</h3>
-                <p>Access over 2 million books, digital resources, and quiet study spaces. Our libraries are open 24/7 to support your learning needs.</p>
-            </div>
-            <div class="facilities-col">
-                <img src="images/Untitled.jpg" alt="Modern Lecture Halls">
-                <h3>Modern Lecture Halls</h3>
-                <p>Equipped with the latest audio-visual technology, our lecture halls provide an immersive learning environment for all students.</p>
-            </div>
-            <div class="facilities-col">
-                <img src="images/img_1042_3.jpg" alt="Campus Dining">
-                <h3>Campus Dining</h3>
-                <p>Enjoy nutritious and delicious meals at our campus restaurants. We cater to all dietary preferences with locally sourced ingredients.</p>
+        
+        <div class="sub-header-content" style="position: relative; z-index: 2; padding-top: 80px;">
+            <div class="container">
+                <h1>Academic Programs</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+                    <span>Courses</span>
+                </div>
             </div>
         </div>
     </section>
     
-
-   
-    <!-------Footer------>
-    <footer class="footer">
-        <h4>About Us</h4>
-        <p>Eduford University is a leading global institution dedicated to academic excellence,<br>innovation, and shaping the leaders of tomorrow since 1950.</p>
-        <div class="icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Programs Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Your Path</h2>
+                <p>Discover our comprehensive range of academic programs designed to prepare you for success in your chosen career. From undergraduate degrees to professional certificates, we offer flexible learning options to suit your needs.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="courses-filter">
+                <button class="filter-btn active" data-filter="all">All Programs</button>
+                <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+                <button class="filter-btn" data-filter="graduate">Graduate</button>
+                <button class="filter-btn" data-filter="professional">Professional</button>
+                <button class="filter-btn" data-filter="online">Online</button>
+            </div>
+            
+            <!-- Featured Programs -->
+            <div class="grid grid-2" style="margin-bottom: var(--space-16);">
+                <div class="course-detail-card">
+                    <div class="course-detail-image">
+                        <img src="images/images333.jpg" alt="Computer Science Program">
+                    </div>
+                    <div class="course-detail-content">
+                        <span style="display: inline-block; padding: var(--space-1) var(--space-3); background: var(--primary-light); color: var(--primary); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 500; margin-bottom: var(--space-4);">Undergraduate</span>
+                        <h3>BSc Computer Science</h3>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4 Years</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>180 Credits</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Fall & Spring Intake</span>
+                            </div>
+                        </div>
+                        <p>Develop expertise in software engineering, artificial intelligence, data structures, and algorithms. Our program combines theoretical foundations with hands-on projects, preparing you for careers in tech giants or innovative startups.</p>
+                        <ul style="margin: var(--space-4) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                            <li>Machine Learning & AI Specialization</li>
+                            <li>Cybersecurity Track Available</li>
+                            <li>Industry Internship Program</li>
+                            <li>95% Graduate Employment Rate</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-detail-card">
+                    <div class="course-detail-image">
+                        <img src="images/Untitled.jpg" alt="Business Administration Program">
+                    </div>
+                    <div class="course-detail-content">
+                        <span style="display: inline-block; padding: var(--space-1) var(--space-3); background: var(--primary-light); color: var(--primary); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 500; margin-bottom: var(--space-4);">Undergraduate</span>
+                        <h3>BA Business Administration</h3>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4 Years</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>180 Credits</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Fall & Spring Intake</span>
+                            </div>
+                        </div>
+                        <p>Master the fundamentals of management, finance, marketing, and entrepreneurship. Our business program emphasizes real-world application through case studies, internships, and networking with industry leaders.</p>
+                        <ul style="margin: var(--space-4) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                            <li>Finance & Investment Specialization</li>
+                            <li>Marketing & Digital Strategy Track</li>
+                            <li>Entrepreneurship Incubator Access</li>
+                            <li>Global Exchange Opportunities</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-detail-card">
+                    <div class="course-detail-image">
+                        <img src="images/img_1042_3.jpg" alt="Data Science Program">
+                    </div>
+                    <div class="course-detail-content">
+                        <span style="display: inline-block; padding: var(--space-1) var(--space-3); background: #e0f2fe; color: #0369a1; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 500; margin-bottom: var(--space-4);">Graduate</span>
+                        <h3>MSc Data Science</h3>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2 Years</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>90 Credits</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Fall Intake</span>
+                            </div>
+                        </div>
+                        <p>Become a data expert with advanced training in statistical analysis, machine learning, big data technologies, and data visualization. Work on real industry projects and build a portfolio that stands out.</p>
+                        <ul style="margin: var(--space-4) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                            <li>Deep Learning & Neural Networks</li>
+                            <li>Big Data Analytics with Hadoop/Spark</li>
+                            <li>Industry Partnership Projects</li>
+                            <li>Thesis or Capstone Options</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="course-detail-card">
+                    <div class="course-detail-image">
+                        <img src="images/changbok-ko-F8t2VGnI47I-unsplash.jpg" alt="Psychology Program">
+                    </div>
+                    <div class="course-detail-content">
+                        <span style="display: inline-block; padding: var(--space-1) var(--space-3); background: var(--primary-light); color: var(--primary); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 500; margin-bottom: var(--space-4);">Undergraduate</span>
+                        <h3>BA Psychology</h3>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4 Years</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>180 Credits</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Fall & Spring Intake</span>
+                            </div>
+                        </div>
+                        <p>Explore the human mind and behavior through rigorous scientific study. Our psychology program offers specializations in clinical, cognitive, developmental, and organizational psychology.</p>
+                        <ul style="margin: var(--space-4) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                            <li>Clinical Psychology Track</li>
+                            <li>Research Methodology Training</li>
+                            <li>Internship at Partner Clinics</li>
+                            <li>Graduate School Preparation</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="copyright">&copy; 2024 Eduford University. All rights reserved.</p>
+    </section>
+    
+    <!-- Professional Certificates -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Certificates</h2>
+                <p>Fast-track your career with industry-recognized certifications designed for working professionals.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>6-month intensive program covering neural networks, deep learning, NLP, and computer vision. Includes hands-on projects with real datasets.</p>
+                    <div style="margin-top: var(--space-6);">
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted);"><i class="fas fa-clock" style="margin-right: var(--space-2);"></i>6 Months</span>
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted); margin-left: var(--space-6);"><i class="fas fa-laptop" style="margin-right: var(--space-2);"></i>Online</span>
+                    </div>
+                    <a href="contact.html" style="display: inline-block; margin-top: var(--space-6); color: var(--primary); font-weight: 500;">Learn More <i class="fas fa-arrow-right" style="margin-left: var(--space-2);"></i></a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive certification in network security, ethical hacking, risk management, and compliance. Prepare for CISSP and CEH certifications.</p>
+                    <div style="margin-top: var(--space-6);">
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted);"><i class="fas fa-clock" style="margin-right: var(--space-2);"></i>4 Months</span>
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted); margin-left: var(--space-6);"><i class="fas fa-laptop" style="margin-right: var(--space-2);"></i>Hybrid</span>
+                    </div>
+                    <a href="contact.html" style="display: inline-block; margin-top: var(--space-6); color: var(--primary); font-weight: 500;">Learn More <i class="fas fa-arrow-right" style="margin-left: var(--space-2);"></i></a>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Master SEO, SEM, social media marketing, content strategy, and analytics. Build campaigns for real businesses during the program.</p>
+                    <div style="margin-top: var(--space-6);">
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted);"><i class="fas fa-clock" style="margin-right: var(--space-2);"></i>3 Months</span>
+                        <span style="font-size: var(--font-size-sm); color: var(--text-muted); margin-left: var(--space-6);"><i class="fas fa-laptop" style="margin-right: var(--space-2);"></i>Online</span>
+                    </div>
+                    <a href="contact.html" style="display: inline-block; margin-top: var(--space-6); color: var(--primary); font-weight: 500;">Learn More <i class="fas fa-arrow-right" style="margin-left: var(--space-2);"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Online Learning -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Online Learning at Eduford</h2>
+                    <p>Experience the same quality education from anywhere in the world. Our online programs are designed for flexibility without compromising academic rigor.</p>
+                    <p>Access live lectures, interactive discussions, and collaborative projects through our state-of-the-art learning management system. Study at your own pace while staying connected with faculty and peers.</p>
+                    <ul style="margin: var(--space-6) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                        <li>24/7 access to course materials</li>
+                        <li>Live virtual office hours with professors</li>
+                        <li>Interactive discussion forums</li>
+                        <li>Same degree as on-campus programs</li>
+                        <li>Career services support included</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Explore Online Programs</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/porter-raab-gnj9vj--FRY-unsplash.jpg" alt="Online Learning">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Admission Requirements -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admission Requirements</h2>
+                <p>Everything you need to know about applying to Eduford University.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card" style="padding: var(--space-8);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-light); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6); font-size: var(--font-size-2xl); color: var(--primary);">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Undergraduate</h3>
+                    <ul style="margin-top: var(--space-4); padding-left: var(--space-6); color: var(--text-secondary); line-height: 2;">
+                        <li>High school diploma</li>
+                        <li>Official transcripts</li>
+                        <li>SAT/ACT scores (optional)</li>
+                        <li>Personal statement</li>
+                        <li>2 letters of recommendation</li>
+                        <li>Application fee: $75</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="padding: var(--space-8);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-light); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6); font-size: var(--font-size-2xl); color: var(--primary);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Graduate</h3>
+                    <ul style="margin-top: var(--space-4); padding-left: var(--space-6); color: var(--text-secondary); line-height: 2;">
+                        <li>Bachelor's degree</li>
+                        <li>Official transcripts</li>
+                        <li>GRE/GMAT scores (program dependent)</li>
+                        <li>Statement of purpose</li>
+                        <li>3 letters of recommendation</li>
+                        <li>Application fee: $100</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="padding: var(--space-8);">
+                    <div style="width: 60px; height: 60px; background: var(--primary-light); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6); font-size: var(--font-size-2xl); color: var(--primary);">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International</h3>
+                    <ul style="margin-top: var(--space-4); padding-left: var(--space-6); color: var(--text-secondary); line-height: 2;">
+                        <li>All standard requirements</li>
+                        <li>English proficiency (IELTS 6.5+)</li>
+                        <li>Credential evaluation</li>
+                        <li>Passport copy</li>
+                        <li>Financial documentation</li>
+                        <li>Visa support provided</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tuition & Financial Aid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tuition & Financial Aid</h2>
+                <p>Investing in your future. Explore our competitive tuition rates and comprehensive financial aid options.</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card" style="padding: var(--space-10);">
+                    <h3 style="margin-bottom: var(--space-6);">2024-2025 Tuition</h3>
+                    <div style="margin-bottom: var(--space-6);">
+                        <div style="display: flex; justify-content: space-between; padding: var(--space-4) 0; border-bottom: 1px solid var(--border-color);">
+                            <span>Undergraduate (per year)</span>
+                            <span style="font-weight: 600;">$45,000</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: var(--space-4) 0; border-bottom: 1px solid var(--border-color);">
+                            <span>Graduate (per year)</span>
+                            <span style="font-weight: 600;">$52,000</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: var(--space-4) 0; border-bottom: 1px solid var(--border-color);">
+                            <span>Professional Certificates</span>
+                            <span style="font-weight: 600;">$8,000 - $15,000</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: var(--space-4) 0;">
+                            <span>Online Programs</span>
+                            <span style="font-weight: 600;">$35,000/year</span>
+                        </div>
+                    </div>
+                    <p style="font-size: var(--font-size-sm); color: var(--text-muted);">* Room and board additional. Subject to annual increase.</p>
+                </div>
+                
+                <div class="card" style="padding: var(--space-10);">
+                    <h3 style="margin-bottom: var(--space-6);">Financial Aid Options</h3>
+                    <ul style="padding-left: var(--space-6); color: var(--text-secondary); line-height: 2.2;">
+                        <li><strong>Merit Scholarships:</strong> Up to full tuition coverage</li>
+                        <li><strong>Need-Based Grants:</strong> Based on FAFSA/CSS Profile</li>
+                        <li><strong>Work-Study Programs:</strong> On-campus employment</li>
+                        <li><strong>Student Loans:</strong> Federal and private options</li>
+                        <li><strong>Payment Plans:</strong> Monthly installment options</li>
+                        <li><strong>Veterans Benefits:</strong> GI Bill accepted</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-6);">Contact Financial Aid</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg" style="position: absolute; inset: 0; background: url('images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg') center/cover; z-index: 0;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(211,47,47,0.95) 0%, rgba(183,28,28,0.95) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="cta-content">
+                <h2>Start Your Application</h2>
+                <p>Take the first step toward your future. Applications for Fall 2025 are now open.</p>
+                <a href="contact.html" class="btn btn-outline btn-lg">Apply Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Eduford University</h3>
+                    <p>Empowering minds and shaping futures since 1950.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="course.html">Programs</a></li>
+                        <li><a href="blog.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="course.html">Undergraduate</a></li>
+                        <li><a href="course.html">Graduate</a></li>
+                        <li><a href="course.html">Online</a></li>
+                        <li><a href="course.html">Certificates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="contact.html">Admissions</a></li>
+                        <li><a href="contact.html">Financial Aid</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduford University. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-
-
-
-
-
-
-<!-------Javascript for Toggle Menu------->
+    
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <div class="toast-container" id="toastContainer"></div>
+    
     <script src="main.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then((registration) => console.log('SW registered'))
-                    .catch((error) => console.log('SW failed:', error));
-            });
-        }
-    </script>
 </body>
 </html>

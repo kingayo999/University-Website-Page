@@ -3,144 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stay updated with the latest news, events, and insights from Eduford University. Explore our blog for educational content.">
-    <meta name="keywords" content="blog, university news, education, certificates, online programs">
-    <meta name="author" content="Eduford University">
-    <title>Blog | Eduford University</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Stay updated with the latest news, research breakthroughs, student stories, and educational insights from Eduford University.">
+    <meta name="keywords" content="university blog, education news, research, student life, academic updates">
+    <title>News & Blog | Eduford University</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <link rel="manifest" href="manifest.json">
+</head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <select aria-label="Select language">
-            <option value="en">🇺🇸 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="fr">🇫🇷 Français</option>
-        </select>
-    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Sub Header -->
     <section class="sub-header">
-        <nav>
-            <a href="index.html"><img src="images/IMG_5922.PNG"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="course.html">COURSE</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
+        <div class="sub-header-bg" style="background-image: url('images/images2.jpg');"></div>
+        <div class="sub-header-bg" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%); z-index: 1;"></div>
+        
+        <nav id="navbar" style="position: relative; z-index: 2;">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/IMG_5922.PNG" alt="Eduford University Logo">
+                    <span class="logo-text">Eduford</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="course.html">Courses</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-       <h1>Our Certificates & Online Programs For 2025</h1>
-
+        
+        <div class="sub-header-content" style="position: relative; z-index: 2; padding-top: 80px;">
+            <div class="container">
+                <h1>News & Insights</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+                    <span>Blog</span>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <!----------blog page content----->
-    <section class="blog-content">
-        <div class="row">
-            <div class="blog-left">
-                <img src="images/bar-1.jpg" alt="Eduford Certificate Programs">
-                <h2>Our Certificates & Online Programs For 2025</h2>
-                <p>In today's rapidly evolving job market, continuous learning is essential for career growth. Eduford University is proud to announce our expanded lineup of professional certificates and online programs for 2025, designed to help you acquire in-demand skills and stay competitive in your field.</p>
-                <br>
-                <p>Our new programs include cutting-edge courses in Artificial Intelligence, Data Science, Cybersecurity, Digital Marketing, and Sustainable Business Practices. Each program is developed in collaboration with industry leaders to ensure our curriculum meets current market demands. Whether you're looking to upskill, reskill, or explore a new career path, our flexible online format allows you to learn at your own pace without compromising your professional commitments.</p>
-                <br>
-                <p>What sets Eduford's certificate programs apart is our commitment to practical, hands-on learning. Students work on real-world projects, receive mentorship from industry experts, and build portfolios that showcase their abilities to potential employers. Upon completion, you'll earn a recognized credential that can be shared on LinkedIn and added to your resume.</p>
-                <br>
-                <p>Enrollment for our 2025 programs opens January 15th. Early registrants receive a 20% discount and exclusive access to our career services, including resume reviews, interview preparation, and networking events with hiring partners. Don't miss this opportunity to invest in your future—spaces are limited.</p>
-
-
-
-
-
-
-                        <div class="comment-box">
-                            <h3>Leave a comment</h3>
-
-                            <form class="comment-form">
-                                <input type="text" placeholder="Enter Name">
-                                <input type="email" placeholder="Enter Email">
-                                <textarea rows="5" placeholder="Your Comment"></textarea>
-                                <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
-                            </form>
+    
+    <!-- Blog Section -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Main Content -->
+                <div class="blog-main">
+                    <!-- Featured Post -->
+                    <article class="blog-card" style="margin-bottom: var(--space-8);">
+                        <img src="images/bar-1.jpg" alt="AI in Education" class="blog-card-image">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span><i class="fas fa-calendar"></i> January 15, 2025</span>
+                                <span><i class="fas fa-folder"></i> Technology</span>
+                                <span><i class="fas fa-user"></i> Dr. Emily Chen</span>
+                            </div>
+                            <h3>The Future of AI in Higher Education: Transforming Learning Experiences</h3>
+                            <p>Artificial Intelligence is revolutionizing the way we approach education. From personalized learning paths to intelligent tutoring systems, AI is creating unprecedented opportunities for student success. At Eduford, we're at the forefront of integrating AI technologies into our curriculum...</p>
+                            <p>In this comprehensive analysis, we explore how machine learning algorithms can adapt to individual student needs, providing customized content delivery and real-time feedback. Our research shows that AI-assisted learning can improve student outcomes by up to 40% while reducing instructor workload.</p>
+                            <p>Key areas of AI integration include:</p>
+                            <ul style="margin: var(--space-4) 0; padding-left: var(--space-6); color: var(--text-secondary);">
+                                <li>Adaptive learning platforms that adjust difficulty based on student performance</li>
+                                <li>AI-powered writing assistants for improved academic writing</li>
+                                <li>Virtual reality simulations for immersive learning experiences</li>
+                                <li>Predictive analytics for early intervention with at-risk students</li>
+                                <li>Automated grading systems for immediate feedback</li>
+                            </ul>
+                            <p>As we move forward, Eduford University is committed to ethical AI implementation, ensuring that technology enhances rather than replaces the human elements of education. Our faculty are trained in AI literacy, and our students graduate with the skills needed to thrive in an AI-augmented workplace.</p>
+                            <div style="margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--border-color);">
+                                <h4 style="margin-bottom: var(--space-4);">Leave a Comment</h4>
+                                <form style="display: flex; flex-direction: column; gap: var(--space-4);">
+                                    <div class="form-row">
+                                        <div class="form-group" style="flex: 1;">
+                                            <input type="text" class="form-input" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group" style="flex: 1;">
+                                            <input type="email" class="form-input" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-textarea" placeholder="Your Comment" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Post Comment</button>
+                                </form>
+                            </div>
                         </div>
-
-            </div>
-            <div class="blog-right">
-                <h3>Post Categories</h3>
-                <div>
-                    <span>Business Analytics</span>
-                    <span>21</span>
+                    </article>
+                    
+                    <!-- More Posts -->
+                    <div class="grid grid-2">
+                        <article class="blog-card">
+                            <img src="images/ivan-aleksic-PDRFeeDniCk-unsplash.jpg" alt="Student Research" class="blog-card-image" style="height: 200px;">
+                            <div class="blog-card-content" style="padding: var(--space-6);">
+                                <div class="blog-card-meta" style="font-size: var(--font-size-xs);">
+                                    <span>January 10, 2025</span>
+                                    <span>Research</span>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin: var(--space-3) 0;">Student Research Spotlight: Breakthrough in Renewable Energy</h3>
+                                <p style="font-size: var(--font-size-sm);">Eduford engineering students develop innovative solar panel technology with 30% increased efficiency...</p>
+                                <a href="#" style="color: var(--primary); font-size: var(--font-size-sm); font-weight: 500;">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card">
+                            <img src="images/porter-raab-gnj9vj--FRY-unsplash.jpg" alt="Campus Life" class="blog-card-image" style="height: 200px;">
+                            <div class="blog-card-content" style="padding: var(--space-6);">
+                                <div class="blog-card-meta" style="font-size: var(--font-size-xs);">
+                                    <span>January 5, 2025</span>
+                                    <span>Campus Life</span>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin: var(--space-3) 0;">New Student Center Opening: A Hub for Innovation and Collaboration</h3>
+                                <p style="font-size: var(--font-size-sm);">State-of-the-art facility features maker spaces, innovation labs, and collaborative workspaces...</p>
+                                <a href="#" style="color: var(--primary); font-size: var(--font-size-sm); font-weight: 500;">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card">
+                            <img src="images/changbok-ko-F8t2VGnI47I-unsplash.jpg" alt="Alumni Success" class="blog-card-image" style="height: 200px;">
+                            <div class="blog-card-content" style="padding: var(--space-6);">
+                                <div class="blog-card-meta" style="font-size: var(--font-size-xs);">
+                                    <span>December 28, 2024</span>
+                                    <span>Alumni</span>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin: var(--space-3) 0;">Alumni Success Story: From Eduford to Silicon Valley CEO</h3>
+                                <p style="font-size: var(--font-size-sm);">Meet Sarah Johnson, Class of 2015, who founded a unicorn startup valued at $2 billion...</p>
+                                <a href="#" style="color: var(--primary); font-size: var(--font-size-sm); font-weight: 500;">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card">
+                            <img src="images/drahomir-hugo-posteby-mach-n4y3eiQSIoc-unsplash.jpg" alt="Global Partnership" class="blog-card-image" style="height: 200px;">
+                            <div class="blog-card-content" style="padding: var(--space-6);">
+                                <div class="blog-card-meta" style="font-size: var(--font-size-xs);">
+                                    <span>December 20, 2024</span>
+                                    <span>Global</span>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin: var(--space-3) 0;">Eduford Partners with Top Asian Universities for Exchange Program</h3>
+                                <p style="font-size: var(--font-size-sm);">New partnerships with universities in Singapore, Japan, and South Korea expand global opportunities...</p>
+                                <a href="#" style="color: var(--primary); font-size: var(--font-size-sm); font-weight: 500;">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div style="display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-12);">
+                        <button class="btn" style="border: 1px solid var(--border-color);"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-primary">1</button>
+                        <button class="btn" style="border: 1px solid var(--border-color);">2</button>
+                        <button class="btn" style="border: 1px solid var(--border-color);">3</button>
+                        <button class="btn" style="border: 1px solid var(--border-color);"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
-                <div>
-                    <span>Data Science</span>
-                    <span>28</span>
-                </div>
-                <div>
-                    <span>Machine Learning</span>
-                    <span>15</span>
-                </div>
-                <div>
-                    <span>Computer Science</span>
-                    <span>34</span>
-                </div>
-                <div>
-                    <span>AutoCAD</span>
-                    <span>42</span>
-                </div>
-                <div>
-                    <span>Journalism</span>
-                    <span>22</span>
-                </div>
-                <div>
-                    <span>Commerce</span>
-                    <span>30</span>
-                </div>
+                
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-widget">
+                        <h4>Search</h4>
+                        <div style="position: relative;">
+                            <input type="text" placeholder="Search articles..." style="width: 100%; padding: var(--space-3) var(--space-4); padding-right: 40px; border: 1px solid var(--border-color); border-radius: var(--radius); font-size: var(--font-size-sm);">
+                            <i class="fas fa-search" style="position: absolute; right: var(--space-4); top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h4>Categories</h4>
+                        <ul class="category-list">
+                            <li><a href="#">Technology <span>24</span></a></li>
+                            <li><a href="#">Research <span>18</span></a></li>
+                            <li><a href="#">Campus Life <span>32</span></a></li>
+                            <li><a href="#">Admissions <span>15</span></a></li>
+                            <li><a href="#">Alumni <span>21</span></a></li>
+                            <li><a href="#">Global <span>12</span></a></li>
+                            <li><a href="#">Events <span>28</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget">
+                        <h4>Recent Posts</h4>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                            <a href="#" style="display: flex; gap: var(--space-3); align-items: center;">
+                                <img src="images/bar-1.jpg" alt="" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius);">
+                                <div>
+                                    <p style="font-size: var(--font-size-sm); font-weight: 500; color: var(--text-primary); line-height: 1.4;">The Future of AI in Higher Education</p>
+                                    <span style="font-size: var(--font-size-xs); color: var(--text-muted);">Jan 15, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" style="display: flex; gap: var(--space-3); align-items: center;">
+                                <img src="images/ivan-aleksic-PDRFeeDniCk-unsplash.jpg" alt="" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius);">
+                                <div>
+                                    <p style="font-size: var(--font-size-sm); font-weight: 500; color: var(--text-primary); line-height: 1.4;">Student Research Spotlight</p>
+                                    <span style="font-size: var(--font-size-xs); color: var(--text-muted);">Jan 10, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" style="display: flex; gap: var(--space-3); align-items: center;">
+                                <img src="images/porter-raab-gnj9vj--FRY-unsplash.jpg" alt="" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius);">
+                                <div>
+                                    <p style="font-size: var(--font-size-sm); font-weight: 500; color: var(--text-primary); line-height: 1.4;">New Student Center Opening</p>
+                                    <span style="font-size: var(--font-size-xs); color: var(--text-muted);">Jan 5, 2025</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="sidebar-widget">
+                        <h4>Popular Tags</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#ArtificialIntelligence</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#Research</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#Innovation</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#CampusLife</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#Global</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#Alumni</a>
+                            <a href="#" style="padding: var(--space-1) var(--space-3); background: var(--bg-secondary); border-radius: var(--radius-full); font-size: var(--font-size-xs); color: var(--text-secondary);">#Technology</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget" style="background: var(--primary);">
+                        <h4 style="color: var(--white); border-bottom-color: rgba(255,255,255,0.3);">Newsletter</h4>
+                        <p style="color: rgba(255,255,255,0.9); font-size: var(--font-size-sm); margin-bottom: var(--space-4);">Subscribe to get the latest news and updates.</p>
+                        <form style="display: flex; flex-direction: column; gap: var(--space-3);">
+                            <input type="email" placeholder="Your email" style="padding: var(--space-3); border: none; border-radius: var(--radius); font-size: var(--font-size-sm);">
+                            <button type="submit" class="btn" style="background: var(--white); color: var(--primary);">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
-
     
-
-   
-    
-
-   
-    <!-------Footer------>
+    <!-- Footer -->
     <footer class="footer">
-        <h4>About Us</h4>
-        <p>Eduford University is a leading global institution dedicated to academic excellence,<br>innovation, and shaping the leaders of tomorrow since 1950.</p>
-        <div class="icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Eduford University</h3>
+                    <p>Empowering minds and shaping futures since 1950.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="course.html">Programs</a></li>
+                        <li><a href="blog.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="course.html">Undergraduate</a></li>
+                        <li><a href="course.html">Graduate</a></li>
+                        <li><a href="course.html">Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="contact.html">Admissions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduford University. All rights reserved.</p>
+            </div>
         </div>
-        <p class="copyright">&copy; 2024 Eduford University. All rights reserved.</p>
     </footer>
-
-
-
-
-
-
-<!-------Javascript for Toggle Menu------->
+    
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <div class="toast-container" id="toastContainer"></div>
+    
     <script src="main.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then((registration) => console.log('SW registered'))
-                    .catch((error) => console.log('SW failed:', error));
-            });
-        }
-    </script>
 </body>
 </html>

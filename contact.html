@@ -3,118 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Eduford University. Contact us for admissions, inquiries, or to schedule a campus visit.">
-    <meta name="keywords" content="contact, admissions, university contact, campus visit">
-    <meta name="author" content="Eduford University">
+    <meta name="description" content="Get in touch with Eduford University. Contact us for admissions inquiries, campus visits, or general questions. We're here to help.">
+    <meta name="keywords" content="contact, admissions, university contact, campus visit, apply">
     <title>Contact Us | Eduford University</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <link rel="manifest" href="manifest.json">
+</head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <select aria-label="Select language">
-            <option value="en">🇺🇸 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="fr">🇫🇷 Français</option>
-        </select>
-    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Sub Header -->
     <section class="sub-header">
-        <nav>
-            <a href="index.html"><img src="images/IMG_5922.PNG"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="course.html">COURSE</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
+        <div class="sub-header-bg" style="background-image: url('images/images2.jpg');"></div>
+        <div class="sub-header-bg" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%); z-index: 1;"></div>
+        
+        <nav id="navbar" style="position: relative; z-index: 2;">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/IMG_5922.PNG" alt="Eduford University Logo">
+                    <span class="logo-text">Eduford</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="course.html">Courses</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-       <h1>Contact Us</h1>
-
-    </section>
-    <!-----------contact us------>
-    <section class="location">
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.6850963295983!2d3.1685207102262636!3d6.685874193281545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9ed1d9a107f3%3A0x3d6834c7aade2faf!2sBells%20University%20of%20Technology!5e0!3m2!1sen!2sng!4v1712938711131!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <section class="contact-us">
-        <div class="row">
-            <div class="contact-col">
-                <div>
-                    <i class="fas fa-home"></i>
-                    <span>
-                        <h5>123 University Avenue</h5>
-                        <p>London, WC1A 1AA, UK</p>
-                    </span>
-                </div>
-                <div>
-                    <i class="fas fa-phone"></i>
-                    <span>
-                        <h5>+44 (0) 20 7946 0958</h5>
-                        <p>Monday to Friday, 9AM to 5PM GMT</p>
-                    </span>
-                </div>
-                <div>
-                    <i class="fas fa-envelope"></i>
-                    <span>
-                        <h5>admissions@eduford.edu</h5>
-                        <p>Email us your query</p>
-                    </span>
+        
+        <div class="sub-header-content" style="position: relative; z-index: 2; padding-top: 80px;">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+                    <span>Contact</span>
                 </div>
             </div>
-            <div class="contact-col">
-                <form action="form-handler.php" method="post">
-                    <input type="text" name="name" placeholder="Enter your name" required>
-                    <input type="email" name="email" placeholder="Enter email address" required>
-                    <input type="text" name="subject" placeholder="Enter your subject" required>
-                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
-                    <button type="submit" class="hero-btn red-btn">Send Message</button>
-                </form>
-            </div>
-    </section>
-
-
-    
-    
-
-    <!-------Footer------>
-    <footer class="footer">
-        <h4>About Us</h4>
-        <p>Eduford University is a leading global institution dedicated to academic excellence,<br>innovation, and shaping the leaders of tomorrow since 1950.</p>
-        <div class="icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <p class="copyright">&copy; 2024 Eduford University. All rights reserved.</p>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p><strong>London Campus</strong><br>123 University Avenue<br>London, WC1A 1AA, UK</p>
+                            <p style="margin-top: var(--space-3);"><strong>New York Campus</strong><br>456 Education Boulevard<br>New York, NY 10001, USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p><strong>Admissions:</strong> +44 (0) 20 7946 0958</p>
+                            <p><strong>General:</strong> +44 (0) 20 7946 0959</p>
+                            <p><strong>Student Services:</strong> +44 (0) 20 7946 0960</p>
+                            <p style="margin-top: var(--space-3); font-size: var(--font-size-sm); color: var(--text-muted);">Mon - Fri: 9:00 AM - 5:00 PM GMT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p><strong>Admissions:</strong> admissions@eduford.edu</p>
+                            <p><strong>General:</strong> info@eduford.edu</p>
+                            <p><strong>Career Services:</strong> careers@eduford.edu</p>
+                            <p><strong>International:</strong> international@eduford.edu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office Hours</h4>
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+                            <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                            <p style="margin-top: var(--space-3); font-size: var(--font-size-sm); color: var(--text-muted);">* Virtual appointments available evenings</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3 style="margin-bottom: var(--space-6);">Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-input" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-input" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-input" placeholder="+1 (555) 123-4567">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Subject *</label>
+                            <select class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="admissions">Undergraduate Admissions</option>
+                                <option value="graduate">Graduate Admissions</option>
+                                <option value="international">International Students</option>
+                                <option value="financial">Financial Aid</option>
+                                <option value="visit">Campus Visit</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message *</label>
+                            <textarea class="form-textarea" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                            <input type="checkbox" id="privacy" required style="margin-top: 4px;">
+                            <label for="privacy" style="font-size: var(--font-size-sm); color: var(--text-secondary);">I agree to the <a href="#" style="color: var(--primary);">Privacy Policy</a> and consent to being contacted regarding my inquiry.</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane" style="margin-right: var(--space-2);"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section style="padding: 0;">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.6850963295983!2d3.1685207102262636!3d6.685874193281545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9ed1d9a107f3%3A0x3d6834c7aade2faf!2sBells%20University%20of%20Technology!5e0!3m2!1sen!2sng!4v1712938711131!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    <!-- Campus Locations -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Campuses</h2>
+                <p>Visit us at any of our three world-class campuses.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card" style="overflow: hidden;">
+                    <img src="images/university-old-building-campus-college.jpg" alt="London Campus" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-6);">
+                        <h3>London Campus</h3>
+                        <p style="margin: var(--space-3) 0; color: var(--text-secondary);">Our flagship campus in the heart of London offers historic architecture combined with modern facilities.</p>
+                        <div style="font-size: var(--font-size-sm); color: var(--text-muted);">
+                            <p><i class="fas fa-map-marker-alt" style="margin-right: var(--space-2); width: 16px;"></i> 123 University Avenue, London</p>
+                            <p style="margin-top: var(--space-2);"><i class="fas fa-phone" style="margin-right: var(--space-2); width: 16px;"></i> +44 (0) 20 7946 0958</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="overflow: hidden;">
+                    <img src="images/about_meredith_blog_2-1.jpg" alt="New York Campus" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-6);">
+                        <h3>New York Campus</h3>
+                        <p style="margin: var(--space-3) 0; color: var(--text-secondary);">Located in Manhattan, our NYC campus provides unparalleled access to industry connections.</p>
+                        <div style="font-size: var(--font-size-sm); color: var(--text-muted);">
+                            <p><i class="fas fa-map-marker-alt" style="margin-right: var(--space-2); width: 16px;"></i> 456 Education Boulevard, New York</p>
+                            <p style="margin-top: var(--space-2);"><i class="fas fa-phone" style="margin-right: var(--space-2); width: 16px;"></i> +1 (212) 555-0123</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="overflow: hidden;">
+                    <img src="images/20230731VisitMilledgevilleHistoricDay-38_95E70AD1-5056-BF65-D6277A4C7D8187C0-95e70a435056bf6_95e70d99-5056-bf65-d69ef5040af37f50.jpg" alt="Washington Campus" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: var(--space-6);">
+                        <h3>Washington D.C. Campus</h3>
+                        <p style="margin: var(--space-3) 0; color: var(--text-secondary);">Our nation's capital campus offers unique opportunities in policy, law, and international relations.</p>
+                        <div style="font-size: var(--font-size-sm); color: var(--text-muted);">
+                            <p><i class="fas fa-map-marker-alt" style="margin-right: var(--space-2); width: 16px;"></i> 789 Knowledge Way, Washington D.C.</p>
+                            <p style="margin-top: var(--space-2);"><i class="fas fa-phone" style="margin-right: var(--space-2); width: 16px;"></i> +1 (202) 555-0456</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Schedule a Visit -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Schedule a Campus Visit</h2>
+                    <p>Experience Eduford firsthand. We offer personalized campus tours led by current students, information sessions with admissions counselors, and opportunities to sit in on classes.</p>
+                    <p>Campus visits are available Monday through Saturday. We recommend booking at least two weeks in advance to ensure availability.</p>
+                    <div style="margin: var(--space-6) 0;">
+                        <h4 style="margin-bottom: var(--space-4);">What to Expect:</h4>
+                        <ul style="padding-left: var(--space-6); color: var(--text-secondary); line-height: 2;">
+                            <li>Guided campus tour (90 minutes)</li>
+                            <li>Admissions information session</li>
+                            <li>Meet with faculty in your area of interest</li>
+                            <li>Visit residence halls and dining facilities</li>
+                            <li>Explore student life and activities</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg" onclick="Toast.show('Visit scheduling coming soon!', 'info'); return false;">
+                        <i class="fas fa-calendar-alt" style="margin-right: var(--space-2);"></i>
+                        Schedule a Visit
+                    </a>
+                </div>
+                <div class="about-image">
+                    <img src="images/porter-raab-gnj9vj--FRY-unsplash.jpg" alt="Campus Visit">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions about contacting us and visiting campus.</p>
+            </div>
+            
+            <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        How long does it take to receive a response?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We typically respond to inquiries within 24-48 business hours. During peak admission periods (October-January), response times may be slightly longer. For urgent matters, we recommend calling our admissions office directly.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I speak with a current student?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Our Student Ambassador program connects prospective students with current Eduford students. You can request a conversation through our contact form or during your campus visit. Ambassadors can share their personal experiences and answer questions about student life.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is there parking available for campus visits?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, visitor parking is available at all three campuses. When you schedule your visit, you'll receive detailed directions and parking information. Parking is complimentary for prospective students and their families.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer virtual campus tours?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! We offer comprehensive virtual tours for international students or those unable to visit in person. Virtual tours include live Q&A sessions with admissions counselors and current students. Schedule through our contact form.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Eduford University</h3>
+                    <p>Empowering minds and shaping futures since 1950.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="course.html">Programs</a></li>
+                        <li><a href="blog.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="course.html">Undergraduate</a></li>
+                        <li><a href="course.html">Graduate</a></li>
+                        <li><a href="course.html">Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="contact.html">Admissions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eduford University. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-
-
-
-
-
-
-<!-------Javascript for Toggle Menu------->
+    
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <div class="toast-container" id="toastContainer"></div>
+    
     <script src="main.js"></script>
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then((registration) => console.log('SW registered'))
-                    .catch((error) => console.log('SW failed:', error));
-            });
-        }
+        // Contact form handling
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            Toast.show('Message sent successfully! We\'ll get back to you soon.', 'success');
+            this.reset();
+        });
     </script>
 </body>
 </html>
