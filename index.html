@@ -16,7 +16,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="manifest" href="manifest.json">
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <select aria-label="Select language">
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+    </div>
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/IMG_5922.PNG"></a>
@@ -40,12 +49,21 @@
 
     </section>
 
+    <!-------Course Search------->
+    <section class="course-search" style="padding: 40px 0; background: #f9f9f9;">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for courses..." aria-label="Search courses">
+            <div class="autocomplete-list"></div>
+        </div>
+    </section>
+
     <!-------Course------->
     <section class="course">
         <h1>Courses We Offer</h1>
         <p>Choose from our diverse range of programs designed to prepare you for success in your chosen field.</p>
 
-        <div class="row">
+        <div class="row courses-dynamic">
+            <!-- Dynamic courses will be loaded here -->
             <div class="course-col">
                 <h3>Intermediate Programs</h3>
                 <p>Foundation courses designed to bridge the gap between secondary education and university-level studies. Build essential skills in critical thinking, research, and academic writing.</p>
@@ -60,29 +78,53 @@
             </div>
         </div>
     </section>
+    <!-------Statistics Section------->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number" data-target="50000">0</span>
+                <span class="stat-label">Students Worldwide</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="200">0</span>
+                <span class="stat-label">Degree Programs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="1500">0</span>
+                <span class="stat-label">Expert Faculty</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="95">0</span>
+                <span class="stat-label">% Employment Rate</span>
+            </div>
+        </div>
+    </section>
+
     <!-------campus------>
     <section class="campus">
         <h1>Our Global Campus</h1>
         <p>Experience world-class education at our state-of-the-art campuses located in major cities around the globe.</p>
 
-        <div class="row">
-            <div class="campus-col">
-                <img src="images/university-old-building-campus-college.jpg" alt="Eduford London Campus">
-                <div class="layer">
-                    <h3>LONDON</h3>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="images/university-old-building-campus-college.jpg" alt="Eduford London Campus">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/about_meredith_blog_2-1.jpg" alt="Eduford New York Campus">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/20230731VisitMilledgevilleHistoricDay-38_95E70AD1-5056-BF65-D6277A4C7D8187C0-95e70a435056bf6_95e70d99-5056-bf65-d69ef5040af37f50.jpg" alt="Eduford Washington Campus">
                 </div>
             </div>
-            <div class="campus-col">
-                <img src="images/about_meredith_blog_2-1.jpg" alt="Eduford New York Campus">
-                <div class="layer">
-                    <h3>NEW YORK</h3>
-                </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div class="campus-col">
-                <img src="images/20230731VisitMilledgevilleHistoricDay-38_95E70AD1-5056-BF65-D6277A4C7D8187C0-95e70a435056bf6_95e70d99-5056-bf65-d69ef5040af37f50.jpg" alt="Eduford Washington Campus">
-                <div class="layer">
-                    <h3>WASHINGTON</h3>
-                </div>
+            <div class="carousel-indicators">
+                <span class="carousel-indicator active"></span>
+                <span class="carousel-indicator"></span>
+                <span class="carousel-indicator"></span>
             </div>
         </div>
     </section>
@@ -112,40 +154,117 @@
         </div>
     </section>
 
+    <!-------FAQ Section------->
+    <section class="course" style="background: #f9f9f9;">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about admissions, programs, and campus life.</p>
+        
+        <div class="accordion">
+            <div class="accordion-item active">
+                <div class="accordion-header">
+                    <h3>What are the admission requirements?</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Admission requirements vary by program. Generally, we require a completed application form, academic transcripts, letters of recommendation, and a personal statement. International students must also provide proof of English proficiency.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Are scholarships available?</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes! We offer merit-based scholarships, need-based financial aid, and athletic scholarships. Over 60% of our students receive some form of financial assistance. Apply by December 1st for priority consideration.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Can I study part-time or online?</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Absolutely! We offer flexible learning options including part-time programs, evening classes, and fully online degrees. Our online platform provides the same quality education with the convenience of learning from anywhere.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>What career support services do you offer?</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Our Career Services Center provides resume reviews, mock interviews, job fairs, networking events, and one-on-one career counseling. We maintain partnerships with over 500 companies for internships and job placements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-------testimonials------>
     <section class="testimonials">
         <h1>What Our Students Say</h1>
         <p>Hear from our graduates about their transformative experiences at Eduford.</p>
-        <div class="row">
-            <div class="testimonial-col">
-                <img src="images/studentmale.jpg" alt="Jameson Milner">
-                <div>
-                    <p>"Eduford transformed my career trajectory. The Computer Science program gave me both theoretical foundations and hands-on experience. I landed my dream job at a top tech company within months of graduation."</p>
-                    <h3>Jameson Milner</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+        <div class="testimonials-slider">
+            <div class="testimonials-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-col">
+                        <img src="images/studentmale.jpg" alt="Jameson Milner">
+                        <div>
+                            <p>"Eduford transformed my career trajectory. The Computer Science program gave me both theoretical foundations and hands-on experience. I landed my dream job at a top tech company within months of graduation."</p>
+                            <h3>Jameson Milner</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-col">
-                <img src="images/studentfemale.jpg" alt="Celestine Sylvester">
-                <div>
-                    <p>"The Business Administration program exceeded my expectations. The professors are industry experts, and the networking opportunities opened doors I never thought possible. Best decision I ever made."</p>
-                    <h3>Celestine Sylvester</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <div class="testimonial-slide">
+                    <div class="testimonial-col">
+                        <img src="images/studentfemale.jpg" alt="Celestine Sylvester">
+                        <div>
+                            <p>"The Business Administration program exceeded my expectations. The professors are industry experts, and the networking opportunities opened doors I never thought possible. Best decision I ever made."</p>
+                            <h3>Celestine Sylvester</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-col">
+                        <img src="images/studentmale2.jpg" alt="Michael Chen">
+                        <div>
+                            <p>"The research opportunities at Eduford are unmatched. I worked alongside renowned professors on cutting-edge projects that prepared me perfectly for my PhD studies at MIT."</p>
+                            <h3>Michael Chen</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-------Newsletter------->
+    <section class="newsletter">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Stay updated with the latest news, events, and educational insights from Eduford.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
 
 
@@ -174,15 +293,19 @@
 
 
 <!-------Javascript for Toggle Menu------->
-
+    <script src="main.js"></script>
     <script>
-        var navLinks = document.getElementById("navLinks");
-
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => {
+                        console.log('SW registered:', registration);
+                    })
+                    .catch((error) => {
+                        console.log('SW registration failed:', error);
+                    });
+            });
         }
     </script>
 </body>

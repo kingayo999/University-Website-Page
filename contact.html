@@ -13,7 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="manifest" href="manifest.json">
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <select aria-label="Select language">
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+    </div>
     <section class="sub-header">
         <nav>
             <a href="index.html"><img src="images/IMG_5922.PNG"></a>
@@ -97,15 +106,14 @@
 
 
 <!-------Javascript for Toggle Menu------->
-
+    <script src="main.js"></script>
     <script>
-        var navLinks = document.getElementById("navLinks");
-
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => console.log('SW registered'))
+                    .catch((error) => console.log('SW failed:', error));
+            });
         }
     </script>
 </body>
